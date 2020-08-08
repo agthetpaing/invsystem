@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.Controllers.CustomerController">
+   <children>
+      <Accordion />
+      <HBox layoutX="347.0" layoutY="61.0" prefHeight="618.0" prefWidth="831.0">
+         <children>
+            <TableView fx:id="tblCustomer" prefHeight="618.0" prefWidth="842.0">
+              <columns>
+                <TableColumn fx:id="colFName" prefWidth="136.79995727539062" text="First Name" />
+                <TableColumn fx:id="colLName" prefWidth="129.60000610351562" text="Last Name" />
+                  <TableColumn fx:id="colPhone" minWidth="0.0" prefWidth="138.13330078125" text="Phone" />
+                  <TableColumn fx:id="colEmail" prefWidth="177.33343505859375" text="Email" />
+                  <TableColumn fx:id="colAddress" prefWidth="252.5333251953125" text="Address" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <Label layoutX="24.0" layoutY="22.0" text="Customers List">
+         <font>
+            <Font name="Century Gothic" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="33.0" layoutY="61.0" prefHeight="619.0" prefWidth="314.0">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="314.0" text="Add New Customer">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <TextField fx:id="txtFName" promptText="First Name" />
+            <TextField fx:id="txtLName" promptText="Last Name" />
+            <TextField fx:id="txtPhone" promptText="Phone" />
+            <TextField fx:id="txtEmail" promptText="Email" />
+            <TextField fx:id="txtStreet" promptText="Street" />
+            <TextField fx:id="txtSuburb" promptText="Suburb" />
+            <ComboBox fx:id="cboState" prefHeight="26.0" prefWidth="358.0" promptText="State" />
+            <TextField fx:id="txtPcode" promptText="Post Code" />
+            <Button fx:id="btnProduct" mnemonicParsing="false" onAction="#viewProduct" prefHeight="26.0" prefWidth="353.0" text="View Products List">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnSale" mnemonicParsing="false" onAction="#viewSale" prefHeight="26.0" prefWidth="353.0" text="View Sale List" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
